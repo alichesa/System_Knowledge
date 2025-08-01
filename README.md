@@ -62,4 +62,6 @@
 - 操作系统启动过程：从 PC 开机到加载 Boot Loader，再到加载内核并开始运行。进程创建过程：通过分配内存、设置页表、加载程序等步骤创建一个新的进程，最终将其状态设置为就绪，等待调度。进程运行过程：调度器选择一个就绪进程并切换到内核上下文，通过 forkret 初始化新进程，最后通过 trapret 切换到用户态，开始执行用户程序。  
 进入系统：PC 开机 → 加载 boot loader → boot loader 加载 xv6 内核 → 内核开始运行 ； 创建一个进程： 建页表 → 分内存 → 映射地址 → 拷程序 → 设寄存器（计数器，栈顶指针等） → 就绪调度 ； 运行一个进程： 进入调度器 → 找到 RUNNABLE 进程 → 切换到内核线程上下文 → forkret 初始化 → trapret 切换到用户态
 
+- 进程的空间可以分为
+<img width="226" height="417" alt="image" src="https://github.com/user-attachments/assets/4453a56b-d7c2-47e9-a735-2e13fc6fa605" />
 
